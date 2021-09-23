@@ -3,27 +3,40 @@
     padding:0;
     margin:0;
     box-sizing: border-box;
-    background-color: black;
     font-family: 'Orbitron', sans-serif;
 }
 
+div{
+    
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/bg.jpg');
+}
 
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-}
-
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* color: rgb(0, 0, 0, 0); */
 }
 
 #logotop{
     width: 35vh;
     height: 17vh;
+}
+
+nav{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -50px;
+}
+
+nav ul{
+    display: inline-block;
 }
 
 button{
@@ -35,37 +48,68 @@ button{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    margin-left: 4vh;
+    margin: 0 4vh;
 }
 
 .menu li{
-    flex: 33%;
+    flex: 1;
     font-size: 15px;
+    width: 60%;
+    padding: 8px 5px;
 }
 
+@media (max-width: 800px) {
+    .menu li{
+      flex: 100%;
+    }
+  }
+
 .menu li a{
-    padding-right: 10vh;
+    margin: 50px;
     color: white;
     text-decoration: none;
-    
+    transition: all 0.4s ease-in 0s;
+    padding: 2px;
 }
-.menu first{
-    padding-right: 10vh;
-    color: white;
-    text-decoration: none;
-    
+
+.menu li a:hover{
+
+    color: #f22613;
+
 }
+
 button{
     margin-right: 10vh; 
     padding: 1vh;
     border: 1px solid white;
     border-radius: 30px;
     background-color: white;
+    transition: all 0.4s ease-in 0s;
+}
+
+button:hover{
+    background-color: #f22613;
 }
 
 button a{
     text-decoration: none;
-    background-color: white;
     color: black;
     font-size: 15px;
+    transition: all 0.4s ease-in 0s;
+}
+
+button a:hover{
+    color: white;
+}
+
+h1{
+    color: rgba(250,250,250,20%);
+    position: relative;
+    top: 60%;
+    text-align: center;
+    transition: all 0.5s ease-in-out 0.7s;
+}
+
+h1:hover{
+    color: rgba(250,250,250,100%);
 }
