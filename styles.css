@@ -58,7 +58,7 @@ button{
     padding: 8px 5px;
 }
 
-@media (max-width: 300px) {
+@media (max-width: 800px) {
     .menu li{
       flex: 100%;
     }
@@ -103,13 +103,45 @@ button a:hover{
 }
 
 h1{
-    color: rgba(250,250,250,20%);
+    color: rgba(250,250,250,0%); 
     position: relative;
-    top: 60%;
+    top: 10%;
     text-align: center;
-    transition: all 0.5s ease-in-out 0.3s;
+    transition: all 1s ease-in 1s;
+    animation-name: welcome;
+    animation-duration: 3s;
+    animation-delay: 1s ;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+
 }
 
-h1:hover{
-    color: rgba(250,250,250,100%);
+@keyframes welcome{
+    0% {color: rgba(250,250,250, 0%);}
+    100% {color: rgba(250,250,250,100%);}
+}
+
+#frame{
+    height: 60vh;
+    width: 60vh;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    top: 3%;
+    opacity: 0;
+    transition:ease-in 1s ease-in 1s;
+    animation: frame 18s linear 1s infinite normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes frame{
+    0%{transform: rotate(0deg); opacity: 0;}
+    17%{transform: rotate(60deg);  opacity: 0.1;}
+    33%{transform: rotate(120deg);  opacity: 0;}
+    50%{transform: rotate(180deg);  opacity: 0.2;}
+    67%{transform: rotate(240deg);  opacity: 0;}
+    84%{transform: rotate(300deg);  opacity: 0.1;}
+    100%{transform: rotate(360deg); opacity: 0 ;}
 }
