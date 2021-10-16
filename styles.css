@@ -119,7 +119,7 @@ h1{
 
 @keyframes welcome{
     0% {color: rgba(250,250,250, 0%);}
-    100% {color: rgba(250,250,250,100%);}
+    100% {color: rgba(250,250,250,20%);}
 }
 
 #frame{
